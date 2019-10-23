@@ -1,7 +1,7 @@
 <template>
   <div class="card">
     <img
-      :src="StaticMedia"
+      :src="content.media"
       alt="media"
     >
     <div class="card__content">
@@ -12,8 +12,6 @@
 </template>
 
 <script>
-import StaticMedia from '@/assets/images/400x300.png';
-
 export default {
   name: 'Card',
   props: {
@@ -22,9 +20,6 @@ export default {
       default: () => {},
     },
   },
-  data: () => ({
-    StaticMedia,
-  }),
 };
 </script>
 
