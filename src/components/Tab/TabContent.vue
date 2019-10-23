@@ -18,6 +18,8 @@ export default {
 
 <style lang="scss" scoped>
 .tabcontent__wrapper {
+  background-color: $tertiary;
   margin-top: 30px;
+  padding: 8px;
 }
 </style>

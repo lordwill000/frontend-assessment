@@ -75,8 +75,11 @@ export default {
     }
   }
   .accordion__content {
+    background-color: $tertiary;
     max-height: 0;
     overflow: hidden;
+    padding-left: 8px;
+    padding-right: 8px;
     transition: all 0.4s $easeInOut;
   }
   &.selected {
@@ -93,6 +96,8 @@ export default {
     }
     .accordion__content {
       max-height: 300px;
+      padding-bottom: 8px;
+      padding-top: 8px;
       transition: all 0.4s $easeInOut;
     }
   }
