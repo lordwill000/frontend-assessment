@@ -14,11 +14,14 @@ npm i -g json-server
 ```
 json-server src/db/db.json
 ```
+The api will run at http://localhost:3000
 
 ### Compiles and hot-reloads for development
 ```
 npm run serve
 ```
+
+The server will run at http://localhost:8080
 
 ### Compiles and minifies for production
 ```
