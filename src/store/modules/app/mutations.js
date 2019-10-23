@@ -1,13 +1,7 @@
 import { types } from './actions';
 
 export default {
-  [types.SET_ACTIVE_TAB]: ((state, payload) => {
-    state.activeTab = payload;
-  }),
-  [types.GET_HEADER_HEIGHT]: ((state, payload) => {
-    state.headerHeight = payload;
-  }),
-  [types.INIT_MODAL]: ((state, payload) => {
-    state.modal = { ...state.modal, ...payload };
-  }),
+  [types.SET_WINDOW_WIDTH](state, payload) {
+    state.windowWidth = payload;
+  },
 };

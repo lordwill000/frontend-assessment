@@ -8,6 +8,7 @@ export default {
     state.isLoading = payload;
   },
   [types.SET](state, payload) {
+    // eslint-disable-next-line array-callback-return
     Object.keys(payload).map((key) => {
       state[key] = payload[key];
     });

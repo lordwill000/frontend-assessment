@@ -12,10 +12,11 @@ const actions = {
   async [types.SET_FETCH_STATUS](ctx, payload) {
     return ctx.commit(types.SET_FETCH_STATUS, payload);
   },
+  // eslint-disable-next-line consistent-return
   async [types.REQUEST](ctx) {
     try {
       await ctx.commit(types.SET_FETCH_STATUS, true);
-      const data = await api.get('/employees');
+      const data = await api.get('/posts');
       await ctx.dispatch(types.SUCCESS, data);
       return data;
     } catch (error) {
