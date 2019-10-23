@@ -2,7 +2,7 @@ import Landing from './Landing.vue';
 
 export default [
   {
-    path: '/',
+    path: '/landing',
     name: 'landing',
     component: Landing,
   },

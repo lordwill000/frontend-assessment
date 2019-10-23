@@ -8,6 +8,7 @@ export default [
     path: '/',
     name: 'home',
     component: Home,
+    redirect: '/landing',
   },
   ...landing,
   ...exercise1,
