@@ -10,10 +10,6 @@
       >
         {{ tab.title }}
       </h3>
-      <div
-        class="indicator"
-        :style="indicatorStyle"
-      />
     </div>
     <TabContent :content="selectedTab.content" />
   </div>
@@ -38,12 +34,6 @@ export default {
       default: () => [],
     },
   },
-  data: () => ({
-    indicatorStyle: {
-      width: '0px',
-      left: '0px',
-    },
-  }),
   computed: {
     ...mapExercise2Getters({
       selectedTab: 'activeSection',
@@ -51,12 +41,12 @@ export default {
   },
   mounted() {
     if (Object.keys(this.selectedTab).length === 0) {
-      this.$emit('selected', this.tabs[0]);
+      this.$emit('selected', { tab: this.tabs[0], source: 'tabs' });
     }
   },
   methods: {
     onTabClick(tab) {
-      this.$emit('selected', tab);
+      this.$emit('selected', { tab, source: 'tabs' });
     },
   },
 };
@@ -74,12 +64,6 @@ export default {
     &.selected {
       color: $accent;
     }
-  }
-  .indicator {
-    background-color: $accent;
-    bottom: 0;
-    height: 1px;
-    position: absolute;
   }
 }
 </style>

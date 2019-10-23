@@ -32,6 +32,7 @@ export default {
 .card {
   border: 1px solid $tertiary;
   border-radius: 8px;
+  height: 100%;
   padding: 20px;
   text-align: center;
   img {
@@ -39,6 +40,12 @@ export default {
     display: block;
     margin-bottom: 20px;
     max-width: 100%;
+  }
+  .card__content {
+    margin-bottom: 72px;
+    @media(max-width: 767px) {
+      margin-bottom: 0;
+    }
   }
 }
 </style>

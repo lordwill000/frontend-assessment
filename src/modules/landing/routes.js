@@ -2,8 +2,8 @@ import Landing from './Landing.vue';
 
 export default [
   {
-    path: '/landing',
-    name: 'landing',
+    path: '/exercise',
+    name: 'exercise',
     component: Landing,
   },
 ];

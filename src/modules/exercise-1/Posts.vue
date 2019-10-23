@@ -7,7 +7,7 @@
       subheading="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
       overlay
     />
-    <div class="posts__featured">
+    <div class="posts__featured my-30">
       <div class="container">
         <Spinner
           v-if="isFetching"
@@ -20,14 +20,11 @@
           <div
             v-for="post in posts"
             :key="post.id"
-            class="col-md-4"
+            class="col-md-4 f-1 f-md-auto"
             :class="windowWidth <= 767 && 'mb-30'"
           >
             <Card
               ref="cards"
-              :style="windowWidth >= 768 && cardHeight !== '' && {
-                height: `${cardHeight + 72}px`
-              }"
               :content="post"
             >
               <LinkButton
@@ -73,7 +70,7 @@ export default {
   data: () => ({
     backgroundDesktop,
     backgroundMobile,
-    cardHeight: '',
+    cardHeight: 0,
     cards: [],
   }),
   computed: {
@@ -112,7 +109,6 @@ export default {
 
 <style lang="scss" scoped>
 .posts__featured {
-  margin-top: 40px;
   .post__link {
     bottom: 20px;
     left: 50%;

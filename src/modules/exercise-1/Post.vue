@@ -1,10 +1,10 @@
 <template>
-  <div
-    v-if="!isFetching && Object.keys(data).length > 0"
-    class="post container"
-  >
+  <div class="post container my-30">
     <div class="row">
-      <div class="col-12">
+      <div
+        v-if="!isFetching && Object.keys(data).length > 0"
+        class="col-12"
+      >
         <h1>{{ data[0].title }}</h1>
         {{ data[0].content }}
         <p>
@@ -13,10 +13,15 @@
           </router-link>
         </p>
       </div>
+      <div
+        v-else
+        class="col-12"
+      >
+        <Spinner />
+      </div>
     </div>
     <div />
   </div>
-  <Spinner v-else />
 </template>
 
 <script>
@@ -68,6 +73,3 @@ export default {
   },
 };
 </script>
-
-<style lang="scss" scoped>
-</style>

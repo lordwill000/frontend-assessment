@@ -42,7 +42,7 @@ export default {
   },
   methods: {
     onSectionClick(tab) {
-      this.$emit('selected', tab);
+      this.$emit('selected', { tab, source: 'accordion' });
     },
   },
 };

@@ -29,15 +29,17 @@ export default {
   border-radius: 30px;
   color: $primary;
   font-family: 'RedHatMed';
-  margin: 20px auto 0;
   padding: 12px 18px;
   text-align: center;
-  transition: all 0.2s ease;
+  transition: background-color 0.2s ease, color 0.2s ease;
   width: 150px;
   &:hover {
     background-color: $primary;
     color: #fff;
     text-decoration: none;
+  }
+  @media(max-width: 767px) {
+    margin: 20px auto 0;
   }
 }
 

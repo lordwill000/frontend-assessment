@@ -65,12 +65,12 @@ export default {
       setActiveSection: types.SET_ACTIVE_SECTION,
     }),
     onSectionClicked(section) {
-      this.setActiveSection(section === this.activeSection ? {} : section);
+      if (section.source === 'tabs') {
+        this.setActiveSection(section.tab);
+      } else {
+        this.setActiveSection(section.tab === this.activeSection ? {} : section.tab);
+      }
     },
   },
 };
 </script>
-
-<style>
-
-</style>
