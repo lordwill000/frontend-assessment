@@ -1,6 +1,8 @@
 <template>
   <div class="tabcontent__wrapper">
+    <!-- eslint-disable -->
     <div v-html="content" />
+    <!-- eslint-enable -->
   </div>
 </template>
 

@@ -12,10 +12,12 @@
       >
         {{ section.title }}
       </h3>
+      <!-- eslint-disable -->
       <div
         class="accordion__content"
         v-html="section.content"
       />
+      <!-- eslint-enable -->
     </div>
   </div>
 </template>
