@@ -1,0 +1,18 @@
+.my-30 {
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.mb-30 {
+  margin-bottom: 30px;
+}
+
+.f-1 {
+  flex: 1;
+}
+
+.f-md-auto {
+  @media(max-width: 767px) {
+    flex: auto;
+  }
+}

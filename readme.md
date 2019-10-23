@@ -1,40 +1,28 @@
-Introduction
----
-Thanks for taking the time to complete this frontend technical assessment. We will be focusing on software quality (scalability, readability, maintainability, etc.) and your eye for detail. You may include any libraries. Bonus points if SASS/LESS is used and jQuery is not used.
+# MindArc Frontend Exam
 
-Exercise 1
----
-Build a responsive page based on the designs.
+## Project setup
+```
+npm install
+```
 
-##### Requirements
-1. Match the designs exactly.
-2. Needs to be responsive.
+## Install json-server
+```
+npm i -g json-server
+```
 
-##### Designs
-* exercise1-desktop.png
-* exercise1-mobile.png
+### Run mock api (from the root folder)
+```
+json-server src/db/db.json
+```
 
-##### Assets
-* Desktop banner - http://via.placeholder.com/1920x650
-* Mobile banner - http://via.placeholder.com/600x600
-* Content images - http://via.placeholder.com/400x300
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
 
-Exercise 2
----
-Read the `data.json` file and display the data as tabs on desktop and an accordion on mobile.
-
-##### Requirements
-1. Display data in tabs on desktop.
-2. Display data in an accordion on mobile.
-3. Only 1 accordion/tab should be open at a time.
-4. Open the first accordion/tab on load.
-5. If the open accordion is selected, close it.
-
+### Compiles and minifies for production
+```
+npm run build
+```
 ###### Bonus points
-* Improve the user experience with meaningful animations/transitions.
-* Design and styling.
-* Explain why the result of `('b' + 'a' + + 'a' + 'a').toLowerCase()` is `banana`.
-
-Submission
----
-We recommend submitting your completed assessment as a forked repository. Please replace README content with instructions and relevant documentation.
+* The result of `('b' + 'a' + + 'a' + 'a').toLowerCase()` is `banana`. This is because the second '`+`' operator is not followed by a string or a number therefore outputs a '`NaN`' which is then followed by '`a`' string. The toLowerCase() function just transformed the whole to string to lowercase.
